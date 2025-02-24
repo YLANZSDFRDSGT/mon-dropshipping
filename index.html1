@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site de Dropshipping</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-menu">
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="product-list">
+            <!-- Vos produits iront ici -->
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Mon Site de Dropshipping</p>
+    </footer>
+</body>
+</html>
