@@ -1,26 +1,140 @@
-   <!DOCTYPE html>
-   <html lang="fr">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Mon Site de Dropshipping</title>
-       <link rel="stylesheet" href="static/style.css">
-   </head>
-   <body>
-       <header>
-           <nav class="nav-menu">
-               <a href="#">Accueil</a>
-               <a href="#">Produits</a>
-               <a href="#">Contact</a>
-           </nav>
-       </header>
-       <main>
-           <div class="product-list">
-               <!-- Vos produits iront ici -->
-           </div>
-       </main>
-       <footer>
-           <p>© 2024 Mon Site de Dropshipping</p>
-       </footer>
-   </body>
-   </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site de Dropshipping</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-menu">
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Système de Connexion/Inscription -->
+    <div class="auth-container">
+        <!-- Boutons de switch -->
+        <div class="auth-switch">
+            <button class="switch-btn active" data-form="login">Connexion</button>
+            <button class="switch-btn" data-form="signup">Inscription</button>
+        </div>
+
+        <!-- Formulaire de Connexion -->
+        <div class="login-form" id="login-form">
+            <h2>Connexion</h2>
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Votre mot de passe" required>
+                </div>
+                <button type="submit" class="auth-btn">Se connecter</button>
+            </form>
+
+            <!-- Vérification à 6 chiffres -->
+            <div class="two-factor-auth">
+                <h3>Code de vérification</h3>
+                <p>Un code à 6 chiffres a été envoyé à votre email</p>
+                <div class="code-inputs">
+                    <input type="text" maxlength="1" class="code-input" required>
+                    <input type="text" maxlength="1" class="code-input" required>
+                    <input type="text" maxlength="1" class="code-input" required>
+                    <input type="text" maxlength="1" class="code-input" required>
+                    <input type="text" maxlength="1" class="code-input" required>
+                    <input type="text" maxlength="1" class="code-input" required>
+                </div>
+                <button class="verify-btn">Vérifier</button>
+                <button class="resend-btn">Renvoyer le code</button>
+            </div>
+        </div>
+
+        <!-- Formulaire d'Inscription -->
+        <div class="signup-form" id="signup-form" style="display: none;">
+            <h2>Inscription</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Nom complet" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Mot de passe" required>
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <div class="strength-meter-fill"></div>
+                        </div>
+                        <span class="strength-text">Force du mot de passe</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirmer le mot de passe" required>
+                </div>
+                <button type="submit" class="auth-btn">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="product-list">
+            <!-- Vos produits iront ici -->
+        </div>
+
+        <!-- Système de paiement -->
+        <div class="payment-container">
+            <h2>Paiement sécurisé</h2>
+            <div class="payment-methods">
+                <!-- Carte bancaire -->
+                <div class="payment-method">
+                    <h3>Carte bancaire</h3>
+                    <form class="card-payment">
+                        <div class="card-input">
+                            <input type="text" placeholder="Numéro de carte" maxlength="16" required>
+                            <input type="text" placeholder="MM/AA" maxlength="5" required>
+                            <input type="text" placeholder="CVC" maxlength="3" required>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- PayPal -->
+                <div class="payment-method">
+                    <h3>PayPal</h3>
+                    <button class="paypal-button">Payer avec PayPal</button>
+                </div>
+
+                <!-- Apple Pay -->
+                <div class="payment-method">
+                    <h3>Apple Pay</h3>
+                    <button class="apple-pay-button">Payer avec Apple Pay</button>
+                </div>
+
+                <!-- Google Pay -->
+                <div class="payment-method">
+                    <h3>Google Pay</h3>
+                    <button class="google-pay-button">Payer avec Google Pay</button>
+                </div>
+            </div>
+
+            <!-- Résumé de la commande -->
+            <div class="payment-summary">
+                <h3>Résumé de votre commande</h3>
+                <div class="summary-details">
+                    <p>Sous-total: <span class="price">99.99€</span></p>
+                    <p>Livraison: <span class="price">4.99€</span></p>
+                    <p class="total">Total: <span class="price">104.98€</span></p>
+                </div>
+                <button class="confirm-payment">Confirmer le paiement</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Mon Site de Dropshipping</p>
+    </footer>
+</body>
+</html>
